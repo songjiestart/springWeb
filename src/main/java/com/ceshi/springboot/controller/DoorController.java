@@ -3,10 +3,10 @@ package com.ceshi.springboot.controller;
 import com.ceshi.springboot.mq.RabbitMqConsumer;
 import com.ceshi.springboot.mq.RabbitMqProducer;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.core.AmqpAdmin;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.DirectExchange;
 import org.springframework.amqp.core.Queue;
-import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,7 +28,7 @@ public class DoorController {
     private RabbitMqProducer rabbitMqProducer;
 
     @Resource
-    private RabbitAdmin rabbitAdmin;
+    private AmqpAdmin rabbitAdmin;
 
 
     @RequestMapping("/producer")

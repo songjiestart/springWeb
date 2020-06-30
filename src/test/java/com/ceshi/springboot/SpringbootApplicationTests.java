@@ -5,6 +5,7 @@ import com.rabbitmq.client.AMQP;
 import org.assertj.core.util.Maps;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
+import org.springframework.amqp.core.AmqpAdmin;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.DirectExchange;
 import org.springframework.amqp.core.Queue;
@@ -22,7 +23,7 @@ class SpringbootApplicationTests {
     @Resource
     private RabbitMqProducer rabbitMqProducer;
     @Resource
-    private RabbitAdmin rabbitAdmin;
+    private AmqpAdmin rabbitAdmin;
 
     @Resource
     private RabbitTemplate rabbitTemplate;
